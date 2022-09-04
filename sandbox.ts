@@ -52,30 +52,48 @@
 // };
 // // ------------------------------------------------------
 
-let char: string;
-let age: number;
-let isTrue: boolean;
+// let char: string;
+// let age: number;
+// let isTrue: boolean;
 
-// age = 'Paper'
-age = 77;
+// // age = 'Paper'
+// age = 77;
 
-let theArray: string[] = [];
+// let theArray: string[] = [];
 
-theArray.push('help');
+// theArray.push('help');
 
-// union type
-let mixedArray: (string | number | boolean)[] = [];
-mixedArray.push(8);
-mixedArray.push('False');
-mixedArray.push(false);
-console.log(mixedArray);
+// // union type
+// let mixedArray: (string | number | boolean)[] = [];
+// mixedArray.push(8);
+// mixedArray.push('False');
+// mixedArray.push(false);
+// console.log(mixedArray);
 
-let obj: object;
-obj = { key: '123', lock: 888 };
+// let obj: object;
+// obj = { key: '123', lock: 888 };
 
-let obj2: {
-  key: number;
-  lock: string;
-};
+// let obj2: {
+//   key: number;
+//   lock: string;
+// };
 
-obj2 = { key: 123, lock: 'pw' };
+// obj2 = { key: 123, lock: 'pw' };
+
+// // ------------------------------------------------------
+
+// let age: any = 58;
+
+// age = true;
+// age = 5;
+
+// let mix: any[] = [];
+// mix.push(5);
+// mix.push(false);
+
+// let humanoid: { name: any; surname: any };
+
+// humanoid = { name: 'Dude', surname: 'Dawg' };
+// humanoid = { name: 44, surname: false };
+
+// // ------------------------------------------------------
