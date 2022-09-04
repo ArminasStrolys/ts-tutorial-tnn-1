@@ -10,16 +10,29 @@
 // // tsc sandbox.ts -w
 // // auto-compiles
 // // ------------------------------------------------------
-var char = 'Predator';
-var age = 324;
-var isKiller = true;
-// age = 55
-// age = false
-// problems arise when types changes
-// const circ = (diameter) => diameter * Math.PI;
-// console.log(circ("66"));
-// // gets NaN
-var circ = function (diameter) { return diameter * Math.PI; };
-// :type fixes issue
-console.log(circ(55));
-// // gets NaN
+// let char = 'Predator';
+// let age = 324;
+// let isKiller = true;
+// // age = 55
+// // age = false
+// // problems arise when types changes
+// // const circ = (diameter) => diameter * Math.PI;
+// // console.log(circ("66"));
+// // // gets NaN
+// const circ = (diameter: number) => diameter * Math.PI;
+// // :type fixes issue
+// console.log(circ(55));
+// // // gets NaN
+// // ------------------------------------------------------
+var names = ['Becky', 'Matt', 'Dylan', 'Sarah'];
+names.push('Jack');
+// names.push(8); // error because initialy defined array was strings
+var mix = [5, 'Ryan', true];
+mix.push(5);
+mix.push('Will');
+mix.push(false);
+// mixed array, but type is NOT any, only the the types that were initially added
+var man = {
+    name: 'Mark',
+    age: 88
+};
