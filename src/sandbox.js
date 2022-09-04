@@ -68,3 +68,34 @@
 // humanoid = { name: 'Dude', surname: 'Dawg' };
 // humanoid = { name: 44, surname: false };
 // // ------------------------------------------------------
+// // tsc --init
+// // in tsconfig.json 'outDir": "./public"' and '"rootDir": "./src"' and '"include": ["src"]'
+// // ------------------------------------------------------
+var greet;
+// greet = 'hello'
+greet = function () {
+    console.log('Bye');
+};
+var addition = function (a, b, c) {
+    console.log(a + b);
+    console.log(c);
+};
+addition(5, 20, '8');
+var substract = function (a, b, c) {
+    console.log(a - b);
+    console.log(c);
+};
+// ? question mark means that arguement is optional
+substract(88, 80);
+var multiplication = function (a, b, c) {
+    if (c === void 0) { c = 5; }
+    console.log(a * b);
+    console.log(c);
+};
+// value after equal sign is the default value
+multiplication(3, 6);
+var minus = function (a, b) {
+    return a - b;
+};
+// TS type after parentheses displays type of returned value
+console.log(minus(15, 5));
