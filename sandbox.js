@@ -24,15 +24,33 @@
 // console.log(circ(55));
 // // // gets NaN
 // // ------------------------------------------------------
-var names = ['Becky', 'Matt', 'Dylan', 'Sarah'];
-names.push('Jack');
-// names.push(8); // error because initialy defined array was strings
-var mix = [5, 'Ryan', true];
-mix.push(5);
-mix.push('Will');
-mix.push(false);
-// mixed array, but type is NOT any, only the the types that were initially added
-var man = {
-    name: 'Mark',
-    age: 88
-};
+// let names = ['Becky', 'Matt', 'Dylan', 'Sarah'];
+// names.push('Jack');
+// // names.push(8); // error because initialy defined array was strings
+// let mix = [5, 'Ryan', true];
+// mix.push(5);
+// mix.push('Will');
+// mix.push(false);
+// // mixed array, but type is NOT any, only the the types that were initially added
+// let man = {
+//   name: 'Mark',
+//   age: 88,
+// };
+// // ------------------------------------------------------
+var char;
+var age;
+var isTrue;
+// age = 'Paper'
+age = 77;
+var theArray = [];
+theArray.push('help');
+// union type
+var mixedArray = [];
+mixedArray.push(8);
+mixedArray.push('False');
+mixedArray.push(false);
+console.log(mixedArray);
+var obj;
+obj = { key: '123', lock: 888 };
+var obj2;
+obj2 = { key: 123, lock: 'pw' };
