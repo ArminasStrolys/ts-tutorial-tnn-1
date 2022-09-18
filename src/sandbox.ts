@@ -111,50 +111,80 @@
 //   console.log('Bye');
 // };
 
-const addition = (a: number, b: number, c: number | string) => {
-  console.log(a + b);
-  console.log(c);
-};
+// const addition = (a: number, b: number, c: number | string) => {
+//   console.log(a + b);
+//   console.log(c);
+// };
 
-addition(5, 20, '8');
+// addition(5, 20, '8');
 
-const substract = (a: number, b: number, c?: number | string) => {
-  console.log(a - b);
-  console.log(c);
-};
-// ? question mark means that arguement is optional
-substract(88, 80);
+// const substract = (a: number, b: number, c?: number | string) => {
+//   console.log(a - b);
+//   console.log(c);
+// };
+// // ? question mark means that arguement is optional
+// substract(88, 80);
 
-const multiplication = (a: number, b: number, c: number | string = 5) => {
-  console.log(a * b);
-  console.log(c);
-};
-// value after equal sign is the default value
-multiplication(3, 6);
+// const multiplication = (a: number, b: number, c: number | string = 5) => {
+//   console.log(a * b);
+//   console.log(c);
+// };
+// // value after equal sign is the default value
+// multiplication(3, 6);
 
-const minus = (a: number, b: number): number => {
-  return a - b;
-};
-// TS type after parentheses displays type of returned value
-console.log(minus(15, 5));
+// const minus = (a: number, b: number): number => {
+//   return a - b;
+// };
+// // TS type after parentheses displays type of returned value
+// console.log(minus(15, 5));
 
 // ----------------------------------------------------------------------------type aliases
 
-type StringOrNumb = string | number;
-//----
-type objWithName = { name: string; uid: StringOrNumb };
+// type StringOrNumb = string | number;
+// //----
+// type objWithName = { name: string; uid: StringOrNumb };
 
-// const logDetails = (uid: StringOrNumb, item: string) => {
-//   console.log(`${item} has a uid of ${uid}`);
-// };
+// // const logDetails = (uid: StringOrNumb, item: string) => {
+// //   console.log(`${item} has a uid of ${uid}`);
+// // };
 
-// const greet = (user: { name: string; uid: StringOrNumb }) => {
+// // const greet = (user: { name: string; uid: StringOrNumb }) => {
+// //   console.log(`${user.name} says hello`);
+// // };
+// const logDetails = (user: objWithName) => {
 //   console.log(`${user.name} says hello`);
 // };
-const logDetails = (user: objWithName) => {
-  console.log(`${user.name} says hello`);
+
+// const greet = (user: objWithName) => {
+//   console.log(`${user.name} says hello`);
+// };
+
+// // ------------------------------------------------------ Function signatures
+
+// let greet: Function
+
+//example 1
+let greet: (a: string, b: string) => void;
+
+greet = (name: string, greeting: string) => {
+  console.log(`${name} says ${greeting} `);
+};
+//example 2
+let calc: (a: number, b: number, C: string) => number;
+calc = (numOne: number, numTwo: number, action: string) => {
+  if (action === 'add') {
+    return numOne + numTwo;
+  } else {
+    return numOne - numTwo;
+  }
 };
 
-const greet = (user: objWithName) => {
-  console.log(`${user.name} says hello`);
+//example 3
+
+let logDetails: (obj: { name: string; age: number }) => void;
+
+type person = { name: string; age: number };
+
+logDetails = (ninja: person) => {
+  console.log(`${ninja.name} is ${ninja.age} years old`);
 };
