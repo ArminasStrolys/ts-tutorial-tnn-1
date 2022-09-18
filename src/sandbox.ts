@@ -103,13 +103,13 @@
 
 // // ------------------------------------------------------
 
-let greet: Function;
+// let greet: Function;
 
 // greet = 'hello'
 
-greet = () => {
-  console.log('Bye');
-};
+// greet = () => {
+//   console.log('Bye');
+// };
 
 const addition = (a: number, b: number, c: number | string) => {
   console.log(a + b);
@@ -137,3 +137,24 @@ const minus = (a: number, b: number): number => {
 };
 // TS type after parentheses displays type of returned value
 console.log(minus(15, 5));
+
+// ----------------------------------------------------------------------------type aliases
+
+type StringOrNumb = string | number;
+//----
+type objWithName = { name: string; uid: StringOrNumb };
+
+// const logDetails = (uid: StringOrNumb, item: string) => {
+//   console.log(`${item} has a uid of ${uid}`);
+// };
+
+// const greet = (user: { name: string; uid: StringOrNumb }) => {
+//   console.log(`${user.name} says hello`);
+// };
+const logDetails = (user: objWithName) => {
+  console.log(`${user.name} says hello`);
+};
+
+const greet = (user: objWithName) => {
+  console.log(`${user.name} says hello`);
+};
