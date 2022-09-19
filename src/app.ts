@@ -1,3 +1,31 @@
+//------------------------ CLASSES
+
+// class Invoice {
+//   client: string;
+//   details: string;
+//   amount: number;
+
+//   constructor(c: string, d: string, a: number) {
+//     this.client = c;
+//     this.details = d;
+//     this.amount = a;
+//   }
+//   format() {
+//     return `${this.client} owes ${this.amount} eu for ${this.details}`;
+//   }
+// }
+
+// const invoice1 = new Invoice('Carl', 'Drugs', 500);
+// const invoice2 = new Invoice('Jill', 'Guns', 125.25);
+
+// let invoices: Invoice[] = [];
+// invoices.push(invoice1);
+// invoices.push(invoice2);
+
+// console.log(invoices);
+
+//------------------------------------
+
 // const anchor = document.querySelector('a')
 
 // console.log(anchor.href)
