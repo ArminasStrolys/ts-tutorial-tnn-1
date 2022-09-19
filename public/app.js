@@ -1,9 +1,9 @@
 "use strict";
 //------------------------ CLASSES
 // class Invoice {
-//   client: string;
-//   details: string;
-//   amount: number;
+//  readonly client: string;
+//  private details: string;
+//  public amount: number;
 //   constructor(c: string, d: string, a: number) {
 //     this.client = c;
 //     this.details = d;
