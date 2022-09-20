@@ -1,4 +1,6 @@
-// interfaces
+// import { Invoice } from '../public/modules/Invoice.js';
+// import { Payment } from '../public/modules/Payment.js';
+// import { HasFormatter } from '../public/interfaces/HasFormatter.js';
 const person1 = {
     name: 'John',
     age: 50,
@@ -35,26 +37,14 @@ let invoices = [];
 invoices.push(invoice1);
 invoices.push(invoice2);
 console.log(invoices);
-//------------------------------------
-// const anchor = document.querySelector('a')
-// console.log(anchor.href)
-//// to remove the error, you need to check if the value is really not null like so:
-// if (anchor) {
-//   console.log(anchor.href)
-// }
-//// or another solution
-// const anchor = document.querySelector('a')!
-// console.log(anchor.href)
-//------------------------
-// // const form = document.querySelector('form')!
-// const form = document.querySelector('.new-item-form') as HTMLFormElement;
-// console.log(form.children);
-// const type = document.querySelector('#type') as HTMLSelectElement;
-// const toForm = document.querySelector('#toForm') as HTMLInputElement;
-// const details = document.querySelector('#details') as HTMLInputElement;
-// const amount = document.querySelector('#amount') as HTMLInputElement;
-// form.addEventListener('submit', (e: Event) => {
-//   e.preventDefault();
-//   console.log(type.value, toForm.value, details.value, amount.valueAsNumber);
-// });
-//------------------------ CLASSES
+// <T> - specify the type
+// const docx: Resource<object> = {
+//   id: 5555,
+//   resName: 'Human',
+//   data: { name: 'Max' },
+// };
+const docx = {
+    id: 5555,
+    resName: 'Human',
+    data: 'Max',
+};

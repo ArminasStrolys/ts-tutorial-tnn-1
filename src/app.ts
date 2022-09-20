@@ -1,3 +1,7 @@
+// import { Invoice } from '../public/modules/Invoice.js';
+// import { Payment } from '../public/modules/Payment.js';
+// import { HasFormatter } from '../public/interfaces/HasFormatter.js';
+
 // interfaces
 
 interface isPerson {
@@ -87,3 +91,20 @@ console.log(invoices);
 // });
 
 //------------------------ CLASSES
+
+interface Resource<T> {
+  id: number;
+  resName: string;
+  data: T;
+}
+// <T> - specify the type
+// const docx: Resource<object> = {
+//   id: 5555,
+//   resName: 'Human',
+//   data: { name: 'Max' },
+// };
+const docx: Resource<string> = {
+  id: 5555,
+  resName: 'Human',
+  data: 'Max',
+};
