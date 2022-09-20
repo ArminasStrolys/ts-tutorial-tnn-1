@@ -1,4 +1,4 @@
-"use strict";
+import { Invoice } from './modules/Invoice.js';
 //------------------------ CLASSES
 // class Invoice {
 //  readonly client: string;
@@ -13,12 +13,12 @@
 //     return `${this.client} owes ${this.amount} eu for ${this.details}`;
 //   }
 // }
-// const invoice1 = new Invoice('Carl', 'Drugs', 500);
-// const invoice2 = new Invoice('Jill', 'Guns', 125.25);
-// let invoices: Invoice[] = [];
-// invoices.push(invoice1);
-// invoices.push(invoice2);
-// console.log(invoices);
+const invoice1 = new Invoice('Carl', 'Drugs', 500);
+const invoice2 = new Invoice('Jill', 'Guns', 125.25);
+let invoices = [];
+invoices.push(invoice1);
+invoices.push(invoice2);
+console.log(invoices);
 //------------------------------------
 // const anchor = document.querySelector('a')
 // console.log(anchor.href)
