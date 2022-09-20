@@ -1,3 +1,19 @@
+// interfaces
+const person1 = {
+    name: 'John',
+    age: 50,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spent ', amount);
+        return amount;
+    },
+};
+const greetPerson = (person) => {
+    console.log('Hi, ', person.name);
+};
+greetPerson(person1);
 import { Invoice } from './modules/Invoice.js';
 //------------------------ CLASSES
 // class Invoice {
